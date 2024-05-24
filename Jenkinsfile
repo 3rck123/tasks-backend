@@ -34,5 +34,8 @@ pipeline {
 				}
 			}
 		}
+		stages ('BuildImage') {
+			sh 'docker build -t backend .'
+		}
 	}
 }
